@@ -23,7 +23,7 @@ const handleSubmit = async (e) => {
   formData.append("Date", new Date().toLocaleString());
 
   const url =
-    "https://script.google.com/macros/s/AKfycbx2k2Y3b5jtgO_aeKi-ql68LLpVWR2N5IdITS3uXUDdaYwy6wU_IkZXxM32LRb0QDFbUQ/exec";
+    "https://script.google.com/macros/s/AKfycbyGnXnbx_VcqKrmqkEvIzr_X4nbRm3t9VZWYwVGGNhsEZc_lgds-2Yj0j0LeojJRGuVZg/exec";
 
       try {
         await fetch(url, {

@@ -17,6 +17,8 @@ const First3DPrintedPage = () => {
             <ChallengeAndApproach/>
             <Outcome/>
         </div>
+        {/* Spacing before footer */}
+        <div className="w-full h-[80px] sm:h-[90px] md:h-[100px] lg:h-[110px] xl:h-[120px]"></div>
         <Footer/>
     </PageTransition>
   )
