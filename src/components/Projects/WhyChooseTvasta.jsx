@@ -27,9 +27,9 @@ const WhyChooseTvasta = () => {
           className="w-5 h-5 object-contain filter brightness-0 invert"
         />
       ),
-      title: "Cost Efficiency",
+      title: "Design Flexibility",
       description:
-        "Reduced labor costs and material waste lead to significant savings on construction projects.",
+        "From curves to cores,match architectural ambition with structural precision.",
     },
     {
       icon: (
