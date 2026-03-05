@@ -1,10 +1,15 @@
+import { useState } from "react";
 import {
   AnimatedButton,
   SlideInLeft,
   SlideInRight,
 } from "../utils/animations.jsx";
+import BrochureForm from "./BrochureForm.jsx";
 
 const Technology = () => {
+
+  const [showBrochureForm, setShowBrochureForm] = useState(false);
+
   return (
     <div className="w-full bg-[#0D192D] rounded-2xl">
       <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-[106px] w-full max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-20 py-16 lg:py-20">
@@ -21,6 +26,7 @@ const Technology = () => {
           </div>
 
           <AnimatedButton
+            onClick={() => setShowBrochureForm(true)}
             className="flex justify-center items-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 gap-[14px] btn-download w-fit whitespace-nowrap"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -70,6 +76,9 @@ const Technology = () => {
           />
         </SlideInRight>
       </div>
+      {showBrochureForm && (
+        <BrochureForm onClose={() => setShowBrochureForm(false)} />
+      )}
     </div>
   );
 };

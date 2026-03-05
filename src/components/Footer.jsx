@@ -161,9 +161,19 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="relative flex flex-col sm:flex-row justify-between items-center pt-8 pb-4">
           {/* Copyright */}
-          <span className="font-outfit font-normal text-[13px] text-gray-400 py-4 sm:py-0">
-            © 2025 TVASTA. All Rights Reserved.
-          </span>
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 py-4 sm:py-0">
+            <span className="font-outfit font-normal text-[13px] text-gray-400">
+              © 2025 TVASTA. All Rights Reserved.
+            </span>
+
+            <Link
+              to="/privacy-policy"
+              onClick={scrollToTop}
+              className="font-outfit font-normal text-[13px] text-gray-400 hover:text-white transition-colors duration-200 hover:underline"
+            >
+              Privacy Policy
+            </Link>
+        </div>
 
           {/* Social Icons - White filled circles with dark icons */}
           <div className="flex items-center gap-3 py-4 sm:py-0">

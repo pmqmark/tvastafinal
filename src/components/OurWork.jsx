@@ -55,8 +55,8 @@ const OurWork = () => {
                 navigate("/our-technology/printers");
                 window.scrollTo(0, 0);
               }}
-              whileHover={{ scale: 1.08 }}
-              whileTap={{ scale: 0.92 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
               transition={{ type: "spring", stiffness: 600, damping: 10 }}
             >
               <div
@@ -114,8 +114,8 @@ const OurWork = () => {
                 navigate("/products");
                 window.scrollTo(0, 0);
               }}
-              whileHover={{ scale: 1.08 }}
-              whileTap={{ scale: 0.92 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
               transition={{ type: "spring", stiffness: 600, damping: 10 }}
             >
               <div
@@ -171,8 +171,8 @@ const OurWork = () => {
                 navigate("/projects/casestudy");
                 window.scrollTo(0, 0);
               }}
-              whileHover={{ scale: 1.08 }}
-              whileTap={{ scale: 0.92 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
               transition={{ type: "spring", stiffness: 600, damping: 10 }}
             >
               <div

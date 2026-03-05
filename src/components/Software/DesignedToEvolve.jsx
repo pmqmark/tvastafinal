@@ -51,8 +51,8 @@ const DesignedToEvolve = () => {
             >
               <AnimatedCard
                 className="relative w-full h-[280px] md:h-[320px] rounded-[12px] overflow-hidden shadow-[0px_10px_25.9px_rgba(13,25,45,0.15)] group cursor-pointer"
-                whileHover={{ scale: 1.08 }}
-                whileTap={{ scale: 0.92 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
                 transition={{ type: "spring", stiffness: 600, damping: 10 }}
               >
                 {/* Background Image */}

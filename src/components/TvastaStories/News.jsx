@@ -77,8 +77,8 @@ const News = () => {
           >
             <AnimatedCard
               className="flex flex-col justify-between items-start p-3 gap-2.5 w-full h-[400px] md:h-[450px] lg:h-[500px] rounded-2xl overflow-hidden cursor-pointer relative"
-              whileHover={{ scale: 1.04 }}
-              whileTap={{ scale: 0.92 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
               transition={{ type: "spring", stiffness: 600, damping: 10 }}
               style={{
                 background: `url(${item.image})`,

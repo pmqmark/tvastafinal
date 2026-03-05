@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FadeIn,
   SlideInLeft,
@@ -6,8 +6,10 @@ import {
   AnimatedButton,
   AnimatedCard,
 } from "../../utils/animations.jsx";
+import BrochureForm from "../BrochureForm.jsx";
 
 const ProductsDownload = () => {
+  const [showBrochureForm, setShowBrochureForm] = useState(false);
   return (
     <section className="flex flex-col md:flex-row items-center gap-[40px] md:gap-[60px] w-full max-w-[1280px] px-4 md:px-8">
       {/* Image */}
@@ -43,6 +45,7 @@ const ProductsDownload = () => {
           <FadeIn delay={0.8} duration={0.8}>
             <AnimatedButton
               className="flex items-center justify-center px-7 py-4 gap-[10px] btn-download group"
+              onClick={() => setShowBrochureForm(true)}
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -79,6 +82,9 @@ const ProductsDownload = () => {
           </FadeIn>
         </div>
       </SlideInRight>
+      {showBrochureForm && (
+        <BrochureForm onClose={() => setShowBrochureForm(false)} />
+      )}
     </section>
   );
 };

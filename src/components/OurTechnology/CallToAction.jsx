@@ -6,9 +6,12 @@ import {
   SlideInLeft,
   SlideInRight,
 } from "../../utils/animations.jsx";
+import BrochureForm from "../BrochureForm.jsx";
 
 const CallToAction = () => {
   const [activeSlide, setActiveSlide] = useState(0);
+  const [showBrochureForm, setShowBrochureForm] = useState(false);
+  
 
   const images = [
     "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom1.png",
@@ -67,6 +70,7 @@ const CallToAction = () => {
               {/* Download Button */}
               <AnimatedButton
                 className="flex items-center btn-download font-outfit font-semibold text-card-mobile md:text-card px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 gap-2 sm:gap-[10px] cursor-pointer whitespace-nowrap"
+                onClick={() => setShowBrochureForm(true)}
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -174,6 +178,9 @@ const CallToAction = () => {
           </div>
         </SlideInRight>
       </div>
+      {showBrochureForm && (
+        <BrochureForm onClose={() => setShowBrochureForm(false)} />
+      )}
     </section>
   );
 };

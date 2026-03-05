@@ -21,8 +21,10 @@ const Hero = React.memo(() => {
         >
           {/* https://tvasta.blr1.cdn.digitaloceanspaces.com/media/herovideo.mp4 */}
           {/* https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Tvasta%20Website%20video_2%20(2).mp4 */}
+          {/* https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Tvasta%20Website%20video_2%20(2).mp4 */}
+          {/* https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Tvasta%20Hero%20section.mp4 */}
           <source
-            src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Tvasta%20Website%20video_2%20(2).mp4"
+            src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Tvasta%20Hero%20section.mp4"
             type="video/mp4"
           />
         </video>
