@@ -6,21 +6,31 @@ import {
   ScaleUp,
   SlideInUp,
 } from "../utils/animations.jsx";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState("Housing");
 
   const tabs = ["Housing", "Public Infrastructure", "R&D and Institutional"];
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   const projectData = {
     Housing: [
       {
         src: "/images/Group%2085.png",
         alt: "Housing Project 1",
+        link:"/projects/casestudy/guest-House"
       },
       {
         src: "/images/Group%2086.png",
         alt: "Housing Project 2",
+        link:"/projects/casestudy/firs3DPrintedHouse"
       },
       {
         src: "/images/Group%2087.png",
@@ -37,8 +47,9 @@ const Projects = () => {
         alt: "Public Infrastructure Project 2",
       },
       {
-        src: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/projectspublic3.jpg",
+        src: "/images/wallOutcome.jpg",
         alt: "Public Infrastructure Project 3",
+        link:"/projects/casestudy/wall-of-TNCA"
       },
     ],
     "R&D and Institutional": [
@@ -142,6 +153,8 @@ const Projects = () => {
                 <div className="flex justify-center gap-8">
                   {currentProjects.map((project, index) => (
                     <ScaleUp key={index} delay={index * 0.1}>
+                      <Link to={project.link || ""}
+                      onClick={scrollToTop}>
                       <motion.img
                         src={project.src}
                         alt={project.alt}
@@ -149,6 +162,7 @@ const Projects = () => {
                         whileHover={{ scale: 1.02 }}
                         transition={{ duration: 0.3 }}
                       />
+                      </Link>
                     </ScaleUp>
                   ))}
                 </div>
@@ -181,6 +195,8 @@ const Projects = () => {
                         index === 2 ? "col-span-2 flex justify-center" : ""
                       }
                     >
+                      <Link to={project.link || ""}
+                      onClick={scrollToTop}>
                       <motion.img
                         src={project.src}
                         alt={project.alt}
@@ -190,6 +206,7 @@ const Projects = () => {
                         whileHover={{ scale: 1.02 }}
                         transition={{ duration: 0.3 }}
                       />
+                      </Link>
                     </ScaleUp>
                   ))}
                 </div>
@@ -201,6 +218,8 @@ const Projects = () => {
               <div className="flex flex-col gap-4">
                 {currentProjects.map((project, index) => (
                   <ScaleUp key={index} delay={index * 0.1}>
+                    <Link to={project.link || ""}
+                    onClick={scrollToTop}>
                     <motion.img
                       src={project.src}
                       alt={project.alt}
@@ -208,6 +227,7 @@ const Projects = () => {
                       whileHover={{ scale: 1.02 }}
                       transition={{ duration: 0.3 }}
                     />
+                    </Link>
                   </ScaleUp>
                 ))}
               </div>

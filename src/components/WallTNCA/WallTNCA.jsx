@@ -18,6 +18,8 @@ const WallTNCAPage = () => {
             <Outcome/>
         </div>
         <Footer/>
+        {/* Spacing before footer */}
+        <div className="w-full h-[80px] sm:h-[90px] md:h-[100px] lg:h-[110px] xl:h-[120px]"></div>
     </PageTransition>
   )
 }

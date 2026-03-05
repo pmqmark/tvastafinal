@@ -5,9 +5,17 @@ import {
   staggerContainer,
   slideInFromLeft,
 } from "../../utils/animations";
+import { Link } from "react-router-dom";
 
 const ExploreBuilds = () => {
   const [activeCategory, setActiveCategory] = useState("Housing");
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   const categories = [
     "Housing",
@@ -24,6 +32,7 @@ const ExploreBuilds = () => {
         description: "Complete homes and infrastructure in days, not months.",
         image:
           "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whytvasta1.jpg",
+        link:"/projects/casestudy/firs3DPrintedHouse"
       },
       {
         id: 2,
@@ -32,6 +41,7 @@ const ExploreBuilds = () => {
         description: "Sustainable housing solutions with innovative design.",
         image:
           "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/projectshouse2.jpg",
+        link:"/projects/casestudy/guest-House"
       },
       {
         id: 3,
@@ -66,6 +76,7 @@ const ExploreBuilds = () => {
         description: "Public facilities designed for sustainability.",
         image:
           "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/projectspublic3.jpg",
+        link:"/projects/casestudy/wall-of-TNCA"
       },
     ],
     "R&D and Institutional": [
@@ -88,7 +99,7 @@ const ExploreBuilds = () => {
       <motion.div
         variants={staggerContainer}
         initial="initial"
-        whileInView="animate"
+        whileInView="animate" 
         viewport={{ once: true }}
         className="flex flex-col items-center gap-[60px] w-full max-w-[1440px] mx-auto"
       >
@@ -188,6 +199,8 @@ const ExploreBuilds = () => {
                   {/* First Row */}
                   <div className="flex flex-col sm:flex-col md:flex-row justify-center items-center gap-[20px] md:gap-[25px] lg:gap-[30px] xl:gap-[40px] w-full mb-[30px] sm:mb-[35px] md:mb-[40px]">
                     {currentProjects.slice(0, 3).map((project, index) => (
+                      <Link to={project.link || ""}
+                      onClick={scrollToTop}>
                       <motion.div
                         key={`${activeCategory}-${project.id}`}
                         initial={{ opacity: 0, scale: 0.9 }}
@@ -224,6 +237,7 @@ const ExploreBuilds = () => {
                         {/* Hover Effect */}
                         <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       </motion.div>
+                      </Link>
                     ))}
                   </div>
 
