@@ -366,7 +366,6 @@ const ContactForm = () => {
                             alignItems: "center",
                             paddingTop: 6,
                             paddingBottom: 6,
-                            borderBottom: "none",
                             borderBottom: "none", // remove small underline under code select (parent has main underline)
                           }),
                           singleValue: (base) => ({

@@ -153,8 +153,8 @@ const ExploreBuilds = () => {
                   <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    whileHover={{ scale: 1.08 }}
-                    whileTap={{ scale: 0.92 }}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.98 }}
                     transition={{ type: "spring", stiffness: 600, damping: 10 }}
                     className="flex flex-col justify-between items-start p-[12px] sm:p-[14px] md:p-[16px] gap-[140px] sm:gap-[160px] md:gap-[180px] lg:gap-[200px] xl:gap-[222px] w-full max-w-[400px] sm:max-w-[450px] md:max-w-[500px] h-[280px] sm:h-[320px] md:h-[350px] lg:h-[380px] xl:h-[400px] rounded-[20px] sm:rounded-[22px] md:rounded-[24px] overflow-hidden relative group cursor-pointer"
                     style={{
@@ -192,8 +192,8 @@ const ExploreBuilds = () => {
                         key={`${activeCategory}-${project.id}`}
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        whileHover={{ scale: 1.08 }}
-                        whileTap={{ scale: 0.92 }}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.98 }}
                         transition={{
                           type: "spring",
                           stiffness: 600,
@@ -235,8 +235,8 @@ const ExploreBuilds = () => {
                           key={`${activeCategory}-${project.id}`}
                           initial={{ opacity: 0, scale: 0.9 }}
                           animate={{ opacity: 1, scale: 1 }}
-                          whileHover={{ scale: 1.08 }}
-                          whileTap={{ scale: 0.92 }}
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.98 }}
                           transition={{
                             type: "spring",
                             stiffness: 600,

@@ -18,6 +18,10 @@ import AccessoriesandTurnkey from "./pages/AccessoriesandTurnkey";
 import ProjectCaseStudy from "./pages/ProjectCaseStudy";
 import { ReactLenis } from "lenis/react";
 import "lenis/dist/lenis.css";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
+import First3DPrinted from "./pages/First3DPrinted";
+import GuestHousepage from "./pages/GuestHousepage";
+import WallTNCA from "./pages/WallTNCA";
 export default function App() {
   return (
     <ReactLenis
@@ -55,6 +59,10 @@ export default function App() {
             element={<AccessoriesandTurnkey />}
           />
           <Route path="/projects/casestudy" element={<ProjectCaseStudy />} />
+          <Route path="/privacy-Policy" element={<PrivacyPolicyPage/>}/>
+          <Route path="/projects/casestudy/firs3DPrintedHouse" element={<First3DPrinted/>}/>
+          <Route path="/projects/casestudy/guest-House" element={<GuestHousepage/>}/>
+          <Route path="/projects/casestudy/wall-of-TNCA" element={<WallTNCA/>}/>
         </Routes>
       </Router>
     </ReactLenis>

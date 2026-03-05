@@ -11,6 +11,7 @@ import WhyChoose3D from "../components/WhyChoose3D";
 import WhyTvasta from "../components/WhyTvasta";
 import BuildBetterTogether from "../components/BuildBetterTogether";
 import { PageTransition } from "../utils/animations.jsx";
+import PrivacyConsent from "../components/PrivacyConsent.jsx";
 
 const HomePage = () => {
   return (
@@ -19,6 +20,7 @@ const HomePage = () => {
         <Navbar />
         <Hero />
         <div className="flex flex-col justify-center items-center gap-[120px] w-full py-[60px]">
+          <PrivacyConsent/>
           <Partners />
           <OurWork />
           <WhyChoose3D />

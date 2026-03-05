@@ -22,7 +22,7 @@ const Partners = () => {
       {/* Section Title */}
       <FadeIn delay={0.2}>
         <h2 className="font-outfit font-medium text-description-mobile md:text-description leading-[140%] text-center text-[#0D192D]">
-          Pioneers since 2016
+          Clients since 2016
         </h2>
       </FadeIn>
 

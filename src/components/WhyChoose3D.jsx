@@ -29,47 +29,51 @@ const WhyChoose3D = () => {
         <div className="flex flex-col lg:flex-row justify-between items-center gap-8 w-full">
           {/* Faster Time to Build */}
           <SlideInLeft delay={0.4} duration={0.8}>
-            <motion.div
-              className="flex flex-col items-start gap-5 w-full lg:w-[597px] cursor-pointer"
-              whileHover={{ scale: 1.08 }}
-              whileTap={{ scale: 0.92 }}
-              transition={{ type: "spring", stiffness: 600, damping: 10 }}
-            >
-              <div className="relative w-full h-[250px] lg:h-[318px] rounded-[10px] overflow-hidden group">
+            <motion.div className="flex flex-col items-start gap-5 w-full lg:w-[597px] cursor-pointer group">
+    
+              <div className="relative w-[calc(100%+8rem)] -mx-16 lg:w-full lg:mx-0 h-[250px] lg:h-[318px] rounded-[10px] overflow-hidden">
+      
                 <img
                   src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whychose3d1.jpg"
                   alt="Faster Time to Build"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white font-outfit font-medium text-description-mobile md:text-description leading-[120%] text-center px-6">
+
+                <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  
+                  <p className="text-white font-outfit font-medium text-description-mobile md:text-description leading-[120%] text-center px-6 
+                                -translate-y-10 group-hover:translate-y-0 
+                                transition-transform duration-300">
                     Complete homes and infrastructure in days, not months. Ideal
                     for urgent or large-scale needs.
                   </p>
+
                 </div>
+
               </div>
+
               <h3 className="font-outfit font-semibold text-description-mobile md:text-description leading-[120%] text-[#0D192D] w-full text-center lg:text-left">
                 Faster Time to Build
               </h3>
+
             </motion.div>
           </SlideInLeft>
 
           {/* Design Without Limits */}
           <SlideInRight delay={0.6} duration={0.8}>
             <motion.div
-              className="flex flex-col items-start gap-5 w-full lg:w-[597px] cursor-pointer"
-              whileHover={{ scale: 1.08 }}
-              whileTap={{ scale: 0.92 }}
-              transition={{ type: "spring", stiffness: 600, damping: 10 }}
+              className="flex flex-col items-start gap-5 w-full lg:w-[597px] cursor-pointer group"
             >
-              <div className="relative w-[calc(100%+8rem)] -mx-16 lg:w-full lg:mx-0 h-[250px] lg:h-[318px] rounded-[10px] overflow-hidden group">
+              <div className="relative w-[calc(100%+8rem)] -mx-16 lg:w-full lg:mx-0 h-[250px] lg:h-[318px] rounded-[10px] overflow-hidden ">
                 <img
                   src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whychose3d2.jpg"
                   alt="Design Without Limits"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white font-outfit font-medium text-description-mobile md:text-description leading-[120%] text-center px-6">
+                <div className="absolute inset-0 bg-black/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white font-outfit font-medium text-description-mobile md:text-description leading-[120%] text-center px-6
+                  -translate-y-10 group-hover:translate-y-0
+                  transition-transform duration-300">
                     Print complex, organic forms without formwork. Bring bold
                     architectural ideas to life.
                   </p>
@@ -87,19 +91,18 @@ const WhyChoose3D = () => {
           {/* Lower Material Waste */}
           <SlideInLeft delay={0.8} duration={0.8}>
             <motion.div
-              className="flex flex-col items-start gap-5 w-full lg:w-[597px] cursor-pointer"
-              whileHover={{ scale: 1.08 }}
-              whileTap={{ scale: 0.92 }}
-              transition={{ type: "spring", stiffness: 600, damping: 10 }}
+              className="flex flex-col items-start gap-5 w-full lg:w-[597px] cursor-pointer group"
             >
-              <div className="relative w-[calc(100%-4rem)] mx-auto lg:w-full lg:mx-0 h-[250px] lg:h-[318px] rounded-[10px] overflow-hidden group">
+              <div className="relative w-[calc(100%-4rem)] mx-auto lg:w-full lg:mx-0 h-[250px] lg:h-[318px] rounded-[10px] overflow-hidden ">
                 <img
                   src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/sdsd.png"
                   alt="Lower Material Waste"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white font-outfit font-medium text-description-mobile md:text-description leading-[120%] text-center px-6">
+                <div className="absolute inset-0 bg-black/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white font-outfit font-medium text-description-mobile md:text-description leading-[120%] text-center px-6
+                  -translate-y-10 group-hover:translate-y-0
+                  transition-transform duration-300">
                     Precision printing cuts down material use and reduces
                     construction waste upto 80%.
                   </p>
@@ -114,19 +117,18 @@ const WhyChoose3D = () => {
           {/* Built to Withstand */}
           <SlideInRight delay={1.0} duration={0.8}>
             <motion.div
-              className="flex flex-col items-start gap-5 w-full lg:w-[597px] cursor-pointer"
-              whileHover={{ scale: 1.08 }}
-              whileTap={{ scale: 0.92 }}
-              transition={{ type: "spring", stiffness: 600, damping: 10 }}
+              className="flex flex-col items-start gap-5 w-full lg:w-[597px] cursor-pointer group"
             >
-              <div className="relative w-[calc(100%-4rem)] mx-auto lg:w-full lg:mx-0 h-[250px] lg:h-[318px] rounded-[10px] overflow-hidden group">
+              <div className="relative w-[calc(100%-4rem)] mx-auto lg:w-full lg:mx-0 h-[250px] lg:h-[318px] rounded-[10px] overflow-hidden">
                 <img
                   src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whychose3d4.png"
                   alt="Built to Withstand"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white font-outfit font-medium text-description-mobile md:text-description leading-[120%] text-center px-6">
+                <div className="absolute inset-0 bg-black/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white font-outfit font-medium text-description-mobile md:text-description leading-[120%] text-center px-6
+                  -translate-y-10 group-hover:translate-y-0
+                  transition-transform duration-300">
                     Structures tested across diverse climates, built to last,
                     backed by real-world performance.
                   </p>
