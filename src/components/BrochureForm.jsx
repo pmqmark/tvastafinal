@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 
 
-const BrochureForm = ({onClose}) => {
+const BrochureForm = ({onClose,brochure}) => {
 
 const [loading, setLoading] = useState(false);
 const [status, setStatus] = useState(""); 
@@ -21,9 +21,10 @@ const handleSubmit = async (e) => {
   formData.append("Company", e.target.company.value);
   formData.append("Role", e.target.role.value);
   formData.append("Date", new Date().toLocaleString());
+  formData.append("UTM",brochure === "homeBrochure" ?"Home Brochure" : "Product Brochure");
 
   const url =
-    "https://script.google.com/macros/s/AKfycbyGnXnbx_VcqKrmqkEvIzr_X4nbRm3t9VZWYwVGGNhsEZc_lgds-2Yj0j0LeojJRGuVZg/exec";
+    "https://script.google.com/macros/s/AKfycbzufCuOvLUpTLpfQDHSLaGpj0yivMQBHrne2IwEuA-Cg0Zl2HJpvInNCuIweMRJKrVKQA/exec";
 
       try {
         await fetch(url, {
@@ -35,9 +36,19 @@ const handleSubmit = async (e) => {
 
         // Download brochure
         const link = document.createElement("a");
-        link.href = "/Tech_Brochure_Dummy.pdf";
-        link.download = "Tech-Brochure.pdf";
-        link.click();
+        if (brochure === "homeBrochure") {
+      link.href = "/dummy image.jpeg";
+      link.download = "Home-Brochure.jpeg";
+    } else {
+      link.href = "/Tech_Brochure_Dummy.pdf";
+      link.download = "Tech-Brochure.pdf";
+    }
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+        
+        
 
         setTimeout(() => {
           onClose();
