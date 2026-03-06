@@ -77,7 +77,7 @@ const Technology = () => {
         </SlideInRight>
       </div>
       {showBrochureForm && (
-        <BrochureForm onClose={() => setShowBrochureForm(false)} />
+        <BrochureForm onClose={() => setShowBrochureForm(false)} brochure ={"homeBrochure"} />
       )}
     </div>
   );
