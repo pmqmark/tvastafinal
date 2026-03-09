@@ -21,7 +21,7 @@ const handleSubmit = async (e) => {
   formData.append("Company", e.target.company.value);
   formData.append("Role", e.target.role.value);
   formData.append("Date", new Date().toLocaleString());
-  formData.append("UTM",brochure === "homeBrochure" ?"Home Brochure" : "Product Brochure");
+  formData.append("UTM",brochure === "homeBrochure" ?"Home Brochure" : brochure === "productBrochure"?"Product Brochure": brochure === "gantryBrochure"?"Gantry Brochure": brochure === "roboticBrochure"?"Robotic Brochure":"");
 
   const url =
     "https://script.google.com/macros/s/AKfycbzufCuOvLUpTLpfQDHSLaGpj0yivMQBHrne2IwEuA-Cg0Zl2HJpvInNCuIweMRJKrVKQA/exec";
@@ -39,9 +39,18 @@ const handleSubmit = async (e) => {
         if (brochure === "homeBrochure") {
       link.href = "/dummy image.jpeg";
       link.download = "Home-Brochure.jpeg";
-    } else {
-      link.href = "/Tech_Brochure_Dummy.pdf";
-      link.download = "Tech-Brochure.pdf";
+    }
+     else if(brochure === "productBrochure"){
+      link.href = "/dummy image.jpeg";
+      link.download = "Product-Brochure.jpeg";
+    }
+    else if(brochure === "roboticBrochure"){
+      link.href = "/dummy image.jpeg";
+      link.download = "Robotic-Brochure.jpeg";
+    }
+    else{
+      link.href = "/dummy image.jpeg";
+      link.download = "Gantry-Brochure.jpeg";
     }
 
     document.body.appendChild(link);

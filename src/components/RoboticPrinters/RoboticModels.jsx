@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FadeIn,
   SlideInLeft,
   SlideInRight,
   AnimatedCard,
 } from "../../utils/animations.jsx";
+import BrochureForm from "../BrochureForm.jsx";
 
 const RoboticModels = () => {
+
+  const [showBrochureForm, setShowBrochureForm] = useState(false);
+
   const models = [
     {
       id: 1,
@@ -164,7 +168,8 @@ const RoboticModels = () => {
 
               {/* CTA Button */}
               <FadeIn delay={0.8 + index * 0.1} duration={0.8}>
-                <button className="flex items-center justify-center gap-[10px] px-[24px] py-[12px] btn-download w-fit group">
+                <button className="flex items-center justify-center gap-[10px] px-[24px] py-[12px] btn-download w-fit group"
+                  onClick={() => setShowBrochureForm(true)}>
                   <span className="text-card-mobile md:text-card font-semibold text-white">
                     {model.buttonText}
                   </span>
@@ -187,6 +192,9 @@ const RoboticModels = () => {
           </div>
         ))}
       </div>
+      {showBrochureForm && (
+        <BrochureForm onClose={() => setShowBrochureForm(false)} brochure ={"roboticBrochure"} />
+      )}
     </section>
   );
 };
