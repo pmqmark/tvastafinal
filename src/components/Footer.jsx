@@ -7,7 +7,7 @@ const Footer = () => {
       top: 0,
       behavior: "smooth",
     });
-  };
+  }; 
 
   const mainLinks = [
     { name: "Who We Are", path: "/who-we-are" },
