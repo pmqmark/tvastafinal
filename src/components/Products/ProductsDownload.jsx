@@ -83,7 +83,7 @@ const ProductsDownload = () => {
         </div>
       </SlideInRight>
       {showBrochureForm && (
-        <BrochureForm onClose={() => setShowBrochureForm(false)} brouchure = {"productBrouchure"}/>
+        <BrochureForm onClose={() => setShowBrochureForm(false)} brochure = {"productBrochure"}/>
       )}
     </section>
   );
